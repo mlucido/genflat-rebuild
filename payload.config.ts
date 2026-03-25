@@ -1,6 +1,7 @@
 import { buildConfig } from 'payload'
 import { sqliteAdapter } from '@payloadcms/db-sqlite'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import sharp from 'sharp'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { Media } from './src/collections/Media'
@@ -36,6 +37,7 @@ export default buildConfig({
   db: sqliteAdapter({
     client: { url: process.env.DATABASE_URI || 'file:./genflat.db' },
   }),
+  sharp,
   secret: process.env.PAYLOAD_SECRET || 'CHANGE_THIS_SECRET',
   typescript: { outputFile: path.resolve(dirname, 'src/payload-types.ts') },
 })

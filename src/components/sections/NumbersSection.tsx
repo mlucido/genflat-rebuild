@@ -4,9 +4,9 @@ export default function NumbersSection({ data }: { data: any }) {
   if (!data) return null
 
   return (
-    <section className="py-24 md:py-32 bg-[#c8a84b]">
+    <section className="py-24 md:py-32 bg-[#F07922]">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-black text-black text-center mb-16">
+        <h2 className="font-[family-name:var(--font-darwin)] text-3xl md:text-4xl font-black text-black text-center mb-16">
           By the Numbers
         </h2>
 

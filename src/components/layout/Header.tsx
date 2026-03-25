@@ -7,24 +7,24 @@ export default async function Header() {
 
   const navLinks: Array<{ label: string; href: string }> = (settings.nav as any) || [
     { label: 'About', href: '#about' },
-    { label: 'Process', href: '#process' },
+    { label: 'The Process', href: '#process' },
     { label: 'Why GenFlat', href: '#whygenflat' },
     { label: 'Specs', href: '#specs' },
     { label: 'News', href: '/news' },
-    { label: 'Investor Info', href: '/investor-information' },
+    { label: 'Investor Information', href: '/investor-information' },
   ]
 
   const logo = typeof settings.logo === 'object' && settings.logo
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d]/95 backdrop-blur-sm border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#373C48]/95 backdrop-blur-sm border-b border-white/5">
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           {logo && logo.url ? (
             <img src={logo.url} alt="GenFlat" className="h-10 w-auto" />
           ) : (
-            <span className="text-2xl font-black font-[family-name:var(--font-heading)] tracking-tight">
-              GEN<span className="text-[#c8a84b]">FLAT</span>
+            <span className="text-2xl font-black font-[family-name:var(--font-darwin)] tracking-tight">
+              GEN<span className="text-[#F07922]">FLAT</span>
             </span>
           )}
         </Link>
@@ -35,7 +35,7 @@ export default async function Header() {
             <li key={i}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-gray-300 hover:text-[#c8a84b] transition-colors uppercase tracking-wider"
+                className="text-sm font-medium text-gray-300 hover:text-[#F07922] transition-colors uppercase tracking-wider"
               >
                 {link.label}
               </Link>
@@ -44,7 +44,7 @@ export default async function Header() {
           <li>
             <Link
               href="#contact"
-              className="bg-[#c8a84b] text-black text-sm font-bold px-5 py-2.5 rounded hover:bg-[#d4b85c] transition-colors uppercase tracking-wider"
+              className="bg-[#F07922] text-black text-sm font-bold px-5 py-2.5 rounded hover:bg-[#d96a1a] transition-colors uppercase tracking-wider"
             >
               Contact
             </Link>

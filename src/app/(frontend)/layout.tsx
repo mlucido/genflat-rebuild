@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { montserrat, inter } from '@/lib/fonts'
+import { darwinPro, roboto } from '@/lib/fonts'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import './globals.css'
@@ -15,8 +15,8 @@ export default function FrontendLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
-      <body className="bg-[#0d0d0d] text-white antialiased">
+    <html lang="en" className={`${darwinPro.variable} ${roboto.variable}`}>
+      <body className="bg-[#373C48] text-white antialiased">
         <Header />
         {children}
         <Footer />

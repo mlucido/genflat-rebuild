@@ -8,13 +8,13 @@ export default async function Footer() {
   const footer: any = settings.footer || {}
 
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/5 py-12">
+    <footer className="bg-[#2a2e38] border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <span className="text-xl font-black font-[family-name:var(--font-heading)] tracking-tight">
-              GEN<span className="text-[#c8a84b]">FLAT</span>
+            <span className="text-xl font-black font-[family-name:var(--font-darwin)] tracking-tight">
+              GEN<span className="text-[#F07922]">FLAT</span>
             </span>
             <p className="text-gray-500 text-sm mt-3">
               Maximizing efficiency. Minimizing footprint.
@@ -23,7 +23,7 @@ export default async function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-[#c8a84b] mb-3">Contact</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-[#F07922] mb-3">Contact</h3>
             {footer.email && (
               <a href={`mailto:${footer.email}`} className="block text-gray-400 text-sm hover:text-white transition-colors">
                 {footer.email}
@@ -36,7 +36,7 @@ export default async function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-[#c8a84b] mb-3">Follow Us</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-[#F07922] mb-3">Follow Us</h3>
             <div className="flex gap-4">
               {footer.socialLinks?.map((social: any, i: number) => (
                 <a
@@ -44,7 +44,7 @@ export default async function Footer() {
                   href={social.url || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#c8a84b] transition-colors text-sm"
+                  className="text-gray-400 hover:text-[#F07922] transition-colors text-sm"
                 >
                   {social.platform}
                 </a>

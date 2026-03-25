@@ -4,14 +4,14 @@ export default function ProcessSection({ data }: { data: any }) {
   if (!data) return null
 
   return (
-    <section id="process" className="py-24 md:py-32 bg-[#0d0d0d]">
+    <section id="process" className="py-24 md:py-32 bg-[#373C48]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-black mb-2">
+          <h2 className="font-[family-name:var(--font-darwin)] text-4xl md:text-5xl lg:text-6xl font-black mb-2">
             {data.heading}
           </h2>
           {data.subheading && (
-            <p className="text-[#c8a84b] text-xl md:text-2xl font-semibold">
+            <p className="text-[#F07922] text-xl md:text-2xl font-semibold">
               {data.subheading}
             </p>
           )}
@@ -23,7 +23,7 @@ export default function ProcessSection({ data }: { data: any }) {
               const image = typeof step.image === 'object' ? step.image : null
               return (
                 <div key={i} className="text-center group">
-                  <div className="relative aspect-[4/3] bg-[#1a1a1a] rounded-lg overflow-hidden mb-4">
+                  <div className="relative aspect-[4/3] bg-[#2a2e38] rounded-lg overflow-hidden mb-4">
                     {image?.url ? (
                       <Image
                         src={image.url}
@@ -38,10 +38,10 @@ export default function ProcessSection({ data }: { data: any }) {
                     )}
                   </div>
                   <div className="flex items-center gap-2 justify-center mb-2">
-                    <span className="bg-[#c8a84b] text-black text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+                    <span className="bg-[#F07922] text-black text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
                       {i + 1}
                     </span>
-                    <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold uppercase tracking-wider">
+                    <h3 className="font-[family-name:var(--font-darwin)] text-lg font-bold uppercase tracking-wider">
                       {step.stepLabel}
                     </h3>
                   </div>

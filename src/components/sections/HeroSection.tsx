@@ -4,7 +4,7 @@ export default function HeroSection({ data }: { data: any }) {
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Video background — falls back to dark bg */}
-      <div className="absolute inset-0 bg-[#0d0d0d]">
+      <div className="absolute inset-0 bg-[#373C48]">
         {data.videos && data.videos.length > 0 && (
           <video
             autoPlay
@@ -26,11 +26,11 @@ export default function HeroSection({ data }: { data: any }) {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-4">
+        <h1 className="font-[family-name:var(--font-darwin)] text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-4">
           {data.headline}
         </h1>
         {data.subheadline && (
-          <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl lg:text-6xl font-black text-[#c8a84b] leading-[0.95] mb-8">
+          <h2 className="font-[family-name:var(--font-darwin)] text-3xl md:text-5xl lg:text-6xl font-black text-[#F07922] leading-[0.95] mb-8">
             {data.subheadline}
           </h2>
         )}
@@ -41,7 +41,7 @@ export default function HeroSection({ data }: { data: any }) {
         )}
         <a
           href="#about"
-          className="inline-block bg-[#c8a84b] text-black font-bold px-8 py-4 text-lg rounded hover:bg-[#d4b85c] transition-colors uppercase tracking-wider"
+          className="inline-block bg-[#F07922] text-black font-bold px-8 py-4 text-lg rounded hover:bg-[#d96a1a] transition-colors uppercase tracking-wider"
         >
           Learn More
         </a>
@@ -49,7 +49,7 @@ export default function HeroSection({ data }: { data: any }) {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-[#c8a84b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#F07922]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>

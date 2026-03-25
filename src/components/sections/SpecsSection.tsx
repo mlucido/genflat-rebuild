@@ -12,13 +12,13 @@ export default function SpecsSection({ data }: { data: any }) {
   ].filter((s) => s.value)
 
   return (
-    <section id="specs" className="py-24 md:py-32 bg-[#1a1a1a]">
+    <section id="specs" className="py-24 md:py-32 bg-[#2a2e38]">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl lg:text-5xl font-black text-center mb-16">
+        <h2 className="font-[family-name:var(--font-darwin)] text-3xl md:text-4xl lg:text-5xl font-black text-center mb-16">
           {data.heading || 'Technical Specifications'}
         </h2>
 
-        <div className="bg-[#0d0d0d] rounded-lg border border-white/5 overflow-hidden">
+        <div className="bg-[#373C48] rounded-lg border border-white/5 overflow-hidden">
           <table className="w-full">
             <tbody>
               {specs.map((spec, i) => (

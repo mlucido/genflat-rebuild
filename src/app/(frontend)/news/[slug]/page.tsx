@@ -36,12 +36,12 @@ export default async function NewsArticlePage({ params }: Props) {
   return (
     <main className="min-h-screen pt-24 pb-16">
       <article className="max-w-3xl mx-auto px-6">
-        <time className="text-sm text-[#c8a84b]">
+        <time className="text-sm text-[#F07922]">
           {new Date(article.publishedDate).toLocaleDateString('en-US', {
             year: 'numeric', month: 'long', day: 'numeric',
           })}
         </time>
-        <h1 className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-black mt-2 mb-8">
+        <h1 className="font-[family-name:var(--font-darwin)] text-3xl md:text-4xl font-black mt-2 mb-8">
           {article.title}
         </h1>
         <div className="prose prose-invert prose-lg max-w-none">

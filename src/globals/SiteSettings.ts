@@ -45,7 +45,7 @@ export const SiteSettings: GlobalConfig = {
       fields: [
         { name: 'primaryColor', type: 'text', defaultValue: '#1a1a1a', label: 'Primary Color (hex)' },
         { name: 'accentColor', type: 'text', defaultValue: '#c8a84b', label: 'Accent Color (hex)' },
-        { name: 'fontHeading', type: 'select', options: ['Inter', 'Montserrat', 'Bebas Neue', 'Oswald'], defaultValue: 'Montserrat' },
+        { name: 'fontHeading', type: 'select', options: ['Inter', 'Montserrat', 'Bebas Neue', 'Oswald', 'Darwin Pro'], defaultValue: 'Montserrat' },
         { name: 'fontBody', type: 'select', options: ['Inter', 'Open Sans', 'Roboto'], defaultValue: 'Inter' },
       ],
     },

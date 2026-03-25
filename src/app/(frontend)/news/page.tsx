@@ -22,7 +22,7 @@ export default async function NewsPage() {
   return (
     <main className="min-h-screen pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-6">
-        <h1 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-black mb-12 text-center">
+        <h1 className="font-[family-name:var(--font-darwin)] text-4xl md:text-5xl font-black mb-12 text-center">
           NEWS
         </h1>
         {articles.length === 0 ? (
@@ -32,7 +32,7 @@ export default async function NewsPage() {
             {articles.map((article) => {
               const image = typeof article.featuredImage === 'object' && article.featuredImage
               return (
-                <article key={article.id} className="bg-[#1a1a1a] rounded-lg overflow-hidden hover:ring-1 hover:ring-[#c8a84b] transition-all">
+                <article key={article.id} className="bg-[#2a2e38] rounded-lg overflow-hidden hover:ring-1 hover:ring-[#F07922] transition-all">
                   {image && image.url && (
                     <div className="relative h-48">
                       <Image
@@ -44,7 +44,7 @@ export default async function NewsPage() {
                     </div>
                   )}
                   <div className="p-6">
-                    <time className="text-sm text-[#c8a84b]">
+                    <time className="text-sm text-[#F07922]">
                       {new Date(article.publishedDate).toLocaleDateString('en-US', {
                         year: 'numeric', month: 'long', day: 'numeric',
                       })}
@@ -56,7 +56,7 @@ export default async function NewsPage() {
                     <Link
                       href={article.externalUrl || `/news/${article.slug}`}
                       target={article.externalUrl ? '_blank' : undefined}
-                      className="inline-block mt-4 text-[#c8a84b] hover:text-[#d4b85c] text-sm font-semibold"
+                      className="inline-block mt-4 text-[#F07922] hover:text-[#d96a1a] text-sm font-semibold"
                     >
                       READ MORE →
                     </Link>

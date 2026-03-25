@@ -19,10 +19,10 @@ export default function ContactFormSection({ data }: { data: any }) {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[#0d0d0d]">
+    <section id="contact" className="py-24 md:py-32 bg-[#373C48]">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+          <h2 className="font-[family-name:var(--font-darwin)] text-3xl md:text-4xl lg:text-5xl font-black mb-4">
             {data?.heading || 'Learn More about GenFlat'}
           </h2>
           {data?.subheading && (
@@ -33,9 +33,9 @@ export default function ContactFormSection({ data }: { data: any }) {
         </div>
 
         {submitted ? (
-          <div className="bg-[#1a1a1a] rounded-lg p-12 text-center">
-            <div className="w-16 h-16 bg-[#c8a84b]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-[#c8a84b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-[#2a2e38] rounded-lg p-12 text-center">
+            <div className="w-16 h-16 bg-[#F07922]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-[#F07922]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -43,7 +43,7 @@ export default function ContactFormSection({ data }: { data: any }) {
             <p className="text-gray-400">We&apos;ll be in touch soon.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="bg-[#1a1a1a] rounded-lg p-8 md:p-12 space-y-6">
+          <form onSubmit={handleSubmit} className="bg-[#2a2e38] rounded-lg p-8 md:p-12 space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
@@ -54,7 +54,7 @@ export default function ContactFormSection({ data }: { data: any }) {
                   id="name"
                   name="name"
                   required
-                  className="w-full bg-[#0d0d0d] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#c8a84b] focus:outline-none transition-colors"
+                  className="w-full bg-[#373C48] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#F07922] focus:outline-none transition-colors"
                   placeholder="John Smith"
                 />
               </div>
@@ -67,7 +67,7 @@ export default function ContactFormSection({ data }: { data: any }) {
                   id="email"
                   name="email"
                   required
-                  className="w-full bg-[#0d0d0d] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#c8a84b] focus:outline-none transition-colors"
+                  className="w-full bg-[#373C48] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#F07922] focus:outline-none transition-colors"
                   placeholder="john@company.com"
                 />
               </div>
@@ -82,7 +82,7 @@ export default function ContactFormSection({ data }: { data: any }) {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full bg-[#0d0d0d] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#c8a84b] focus:outline-none transition-colors"
+                  className="w-full bg-[#373C48] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#F07922] focus:outline-none transition-colors"
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
@@ -94,7 +94,7 @@ export default function ContactFormSection({ data }: { data: any }) {
                   type="text"
                   id="company"
                   name="company"
-                  className="w-full bg-[#0d0d0d] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#c8a84b] focus:outline-none transition-colors"
+                  className="w-full bg-[#373C48] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#F07922] focus:outline-none transition-colors"
                   placeholder="Acme Shipping Co."
                 />
               </div>
@@ -108,28 +108,51 @@ export default function ContactFormSection({ data }: { data: any }) {
                 <select
                   id="businessType"
                   name="businessType"
-                  className="w-full bg-[#0d0d0d] border border-white/10 rounded px-4 py-3 text-white focus:border-[#c8a84b] focus:outline-none transition-colors"
+                  className="w-full bg-[#373C48] border border-white/10 rounded px-4 py-3 text-white focus:border-[#F07922] focus:outline-none transition-colors"
                 >
                   <option value="">Select...</option>
-                  <option value="shipping">Shipping Line</option>
-                  <option value="logistics">Logistics Provider</option>
-                  <option value="freight">Freight Forwarder</option>
-                  <option value="manufacturer">Manufacturer</option>
-                  <option value="investor">Investor</option>
-                  <option value="other">Other</option>
+                  <option value="Distribution/Warehouse">Distribution/Warehouse</option>
+                  <option value="Freight Forwarder">Freight Forwarder</option>
+                  <option value="Heavy Haul Trucking">Heavy Haul Trucking</option>
+                  <option value="Intermodal Rail Terminal">Intermodal Rail Terminal</option>
+                  <option value="Leasing Company">Leasing Company</option>
+                  <option value="Logistics Transportation">Logistics Transportation</option>
+                  <option value="Marine Terminal Operator">Marine Terminal Operator</option>
+                  <option value="Media">Media</option>
+                  <option value="NVOCC">NVOCC</option>
+                  <option value="Ocean Carrier">Ocean Carrier</option>
+                  <option value="Port Authority">Port Authority</option>
+                  <option value="Railroad">Railroad</option>
+                  <option value="Third Party Distribution">Third Party Distribution</option>
+                  <option value="Trucking">Trucking</option>
+                  <option value="Union/Labor">Union/Labor</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div>
                 <label htmlFor="jobFunction" className="block text-sm font-medium text-gray-400 mb-2">
                   Job Function
                 </label>
-                <input
-                  type="text"
+                <select
                   id="jobFunction"
                   name="jobFunction"
-                  className="w-full bg-[#0d0d0d] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#c8a84b] focus:outline-none transition-colors"
-                  placeholder="VP Operations"
-                />
+                  className="w-full bg-[#373C48] border border-white/10 rounded px-4 py-3 text-white focus:border-[#F07922] focus:outline-none transition-colors"
+                >
+                  <option value="">Select...</option>
+                  <option value="Corporate Management CEO VP">Corporate Management CEO VP</option>
+                  <option value="Distribution management">Distribution management</option>
+                  <option value="Economic Forecasting/Strategy">Economic Forecasting/Strategy</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="General Management">General Management</option>
+                  <option value="Government Official/Compliance">Government Official/Compliance</option>
+                  <option value="Logistics">Logistics</option>
+                  <option value="Operations/Plant/General management">Operations/Plant/General management</option>
+                  <option value="Port Management">Port Management</option>
+                  <option value="Procurement/Purchasing">Procurement/Purchasing</option>
+                  <option value="Sales/Marketing/Business Development">Sales/Marketing/Business Development</option>
+                  <option value="Supply Chain Executive">Supply Chain Executive</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
             </div>
 
@@ -141,7 +164,7 @@ export default function ContactFormSection({ data }: { data: any }) {
                 id="interest"
                 name="interest"
                 rows={4}
-                className="w-full bg-[#0d0d0d] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#c8a84b] focus:outline-none transition-colors resize-none"
+                className="w-full bg-[#373C48] border border-white/10 rounded px-4 py-3 text-white placeholder-gray-600 focus:border-[#F07922] focus:outline-none transition-colors resize-none"
                 placeholder="Tell us about your interest in GenFlat..."
               />
             </div>
@@ -149,7 +172,7 @@ export default function ContactFormSection({ data }: { data: any }) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#c8a84b] text-black font-bold py-4 rounded text-lg hover:bg-[#d4b85c] transition-colors uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#F07922] text-black font-bold py-4 rounded text-lg hover:bg-[#d96a1a] transition-colors uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Sending...' : (data?.submitButtonText || 'CONTACT US')}
             </button>
