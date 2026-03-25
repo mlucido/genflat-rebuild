@@ -16,7 +16,7 @@ export default function FrontendLayout({
 }) {
   return (
     <html lang="en" className={`${darwinPro.variable} ${roboto.variable}`}>
-      <body className="bg-[#373C48] text-white antialiased">
+      <body className="bg-white text-[#373C48] antialiased">
         <Header />
         {children}
         <Footer />

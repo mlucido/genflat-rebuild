@@ -20,19 +20,19 @@ export default async function NewsPage() {
   })
 
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen bg-white pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-6">
-        <h1 className="font-[family-name:var(--font-darwin)] text-4xl md:text-5xl font-black mb-12 text-center">
+        <h1 className="font-[family-name:var(--font-darwin)] text-4xl md:text-5xl font-black mb-12 text-center text-[#373C48]">
           NEWS
         </h1>
         {articles.length === 0 ? (
-          <p className="text-center text-gray-400">No articles yet.</p>
+          <p className="text-center text-gray-500">No articles yet.</p>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => {
               const image = typeof article.featuredImage === 'object' && article.featuredImage
               return (
-                <article key={article.id} className="bg-[#2a2e38] rounded-lg overflow-hidden hover:ring-1 hover:ring-[#F07922] transition-all">
+                <article key={article.id} className="bg-[#f5f5f5] rounded-lg overflow-hidden hover:ring-1 hover:ring-[#F07922] transition-all">
                   {image && image.url && (
                     <div className="relative h-48">
                       <Image
@@ -49,9 +49,9 @@ export default async function NewsPage() {
                         year: 'numeric', month: 'long', day: 'numeric',
                       })}
                     </time>
-                    <h2 className="text-xl font-bold mt-2 mb-3">{article.title}</h2>
+                    <h2 className="text-xl font-bold mt-2 mb-3 text-[#373C48]">{article.title}</h2>
                     {article.excerpt && (
-                      <p className="text-gray-400 text-sm line-clamp-3">{article.excerpt}</p>
+                      <p className="text-gray-600 text-sm line-clamp-3">{article.excerpt}</p>
                     )}
                     <Link
                       href={article.externalUrl || `/news/${article.slug}`}

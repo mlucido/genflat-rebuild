@@ -7,53 +7,43 @@ export default function WhyGenFlatSection({ data }: { data: any }) {
   if (!hasFully && !hasEmpty) return null
 
   return (
-    <section className="py-24 md:py-32 bg-[#373C48]">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="font-[family-name:var(--font-darwin)] text-3xl md:text-4xl font-black text-center mb-16">
-          Why <span className="text-[#F07922]">GenFlat</span>?
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <h2 className="font-[family-name:var(--font-darwin)] text-5xl md:text-6xl font-black text-[#F07922] mb-16">
+          GenFlat
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Fully Loaded Column */}
-          {hasFully && (
-            <div className="bg-[#2a2e38] rounded-lg p-8">
-              <h3 className="font-[family-name:var(--font-darwin)] text-xl font-bold mb-6 flex items-center gap-3">
-                <span className="w-3 h-3 bg-[#F07922] rounded-full" />
-                Fully Loaded
-              </h3>
-              <ul className="space-y-3">
-                {data.fullyLoadedPoints.map((item: any, i: number) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-300">
-                    <svg className="w-5 h-5 text-[#F07922] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {item.point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+        {/* Fully Loaded */}
+        {hasFully && (
+          <div className="mb-12">
+            <h3 className="font-[family-name:var(--font-darwin)] text-lg font-bold text-[#373C48] mb-6 uppercase tracking-wider">
+              &ldquo;Fully Loaded&rdquo; &ndash; No Difference
+            </h3>
+            <ul className="space-y-2">
+              {data.fullyLoadedPoints.map((item: any, i: number) => (
+                <li key={i} className="text-[#7A7A7A] text-sm">
+                  - {item.point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-          {/* Empty Column */}
-          {hasEmpty && (
-            <div className="bg-[#2a2e38] rounded-lg p-8">
-              <h3 className="font-[family-name:var(--font-darwin)] text-xl font-bold mb-6 flex items-center gap-3">
-                <span className="w-3 h-3 bg-white/30 rounded-full" />
-                Empty
-              </h3>
-              <ul className="space-y-3">
-                {data.emptyPoints.map((item: any, i: number) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-300">
-                    <svg className="w-5 h-5 text-[#F07922] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {item.point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
+        {/* Empty */}
+        {hasEmpty && (
+          <div>
+            <h3 className="font-[family-name:var(--font-darwin)] text-lg font-bold text-[#373C48] mb-6 uppercase tracking-wider">
+              &ldquo;Empty&rdquo; &ndash; 4x the Utilization of Space
+            </h3>
+            <ul className="space-y-2">
+              {data.emptyPoints.map((item: any, i: number) => (
+                <li key={i} className="text-[#7A7A7A] text-sm">
+                  - {item.point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   )

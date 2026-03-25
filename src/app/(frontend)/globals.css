@@ -15,8 +15,8 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: #ffffff;
+  color: var(--color-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,17 +25,4 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-primary-dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
-  border-radius: 4px;
 }

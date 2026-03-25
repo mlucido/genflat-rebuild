@@ -27,20 +27,14 @@ export default function AnimatedCounter({
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true)
-          let start = 0
           const startTime = performance.now()
 
           const animate = (currentTime: number) => {
             const elapsed = currentTime - startTime
             const progress = Math.min(elapsed / duration, 1)
-            // Ease out cubic
             const eased = 1 - Math.pow(1 - progress, 3)
-            const current = Math.round(eased * value)
-            setCount(current)
-
-            if (progress < 1) {
-              requestAnimationFrame(animate)
-            }
+            setCount(Math.round(eased * value))
+            if (progress < 1) requestAnimationFrame(animate)
           }
 
           requestAnimationFrame(animate)
@@ -55,7 +49,7 @@ export default function AnimatedCounter({
 
   return (
     <div ref={ref}>
-      <span className="font-[family-name:var(--font-darwin)] text-4xl md:text-5xl font-black text-black">
+      <span className="font-[family-name:var(--font-darwin)] text-4xl md:text-5xl font-black text-[#373C48]">
         {prefix}{count.toLocaleString()}{suffix}
       </span>
     </div>

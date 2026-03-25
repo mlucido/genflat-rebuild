@@ -2,27 +2,21 @@ export default function ValuePropsSection({ data }: { data: any }) {
   if (!data) return null
 
   return (
-    <section id="whygenflat" className="py-24 md:py-32 bg-[#2a2e38]">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="font-[family-name:var(--font-darwin)] text-3xl md:text-4xl lg:text-5xl font-black text-center mb-16">
+    <section id="whygenflat" className="py-16 md:py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
+        <h2 className="font-[family-name:var(--font-darwin)] text-2xl md:text-3xl font-normal text-[#373C48] text-center mb-16">
           {data.heading}
         </h2>
 
         {data.props && data.props.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
             {data.props.map((prop: any, i: number) => (
-              <div
-                key={i}
-                className="bg-[#373C48] border border-white/5 rounded-lg p-8 hover:border-[#F07922]/30 transition-colors"
-              >
-                <div className="w-10 h-10 bg-[#F07922]/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#F07922] font-bold text-lg">{i + 1}</span>
-                </div>
-                <h3 className="font-[family-name:var(--font-darwin)] text-xl font-bold mb-3">
+              <div key={i} className="text-center">
+                <h3 className="font-[family-name:var(--font-darwin)] text-lg font-bold text-[#373C48] mb-3">
                   {prop.title}
                 </h3>
                 {prop.description && (
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-[#7A7A7A] text-sm leading-relaxed">
                     {prop.description}
                   </p>
                 )}
