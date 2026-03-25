@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# payload
+*.db
+public/media/*
+!public/media/.gitkeep
+src/payload-types.ts
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
